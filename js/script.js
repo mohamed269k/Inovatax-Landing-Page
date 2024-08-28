@@ -16,6 +16,18 @@ function changeTogglerIcon(){
     }
 }
 
+function downloadFile() { 
+  const link = document.createElement('a'); 
+  
+  link.href = 'apks/app.apk'; 
+  link.download = 'app.apk'; 
+  
+  document.body.appendChild(link); 
+  link.click(); 
+  document.body.removeChild(link); 
+}
+
+
 // stop tranisition and animation while resizing
 let resizeTimer;
 window.addEventListener('resize', () => {
